@@ -1,0 +1,8 @@
+select.form-select.form-select-sm,
+input.form-control.form-control-sm {
+    background-color: #000;
+}
+
+#dashChart{
+    height: 200px;
+}
