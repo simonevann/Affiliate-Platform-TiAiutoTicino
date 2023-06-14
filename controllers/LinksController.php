@@ -1,5 +1,8 @@
 <?php
 require_once('models/Link.php');
+/**
+ * Controller per la gestione della pagina dei link
+ */
 class LinksController extends AdminController{
 
     private $link;
@@ -16,4 +19,5 @@ class LinksController extends AdminController{
         $link = new Link();
         return $this->link->getLinksByUserId($id);
     }
+
 }

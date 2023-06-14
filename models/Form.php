@@ -28,7 +28,7 @@ class Form{
     }
 
 
-    public function add_input($name, $type, $class='form-control', $value = null, $extra=null){
+    public function add_input($name, $type, $class, $value = null, $extra=null){
         echo '<div class="mb-3">';
         echo '<label class="form-label" for="'.$name.'">'.ucfirst($name).'</label>';
         echo '<input 
@@ -60,7 +60,7 @@ class Form{
     }
 
     public function add_submit($name, $value){
-            $this->add_input($name, 'submit', 'form-control', $value, null);
+            $this->add_input($name, 'submit', 'w-100 btn btn-lg btn-primary', $value, null);
     }
 
     public function add_text_area($name, $rows, $cols, $class='form-control', $value = null, $extra=null){

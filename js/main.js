@@ -10,6 +10,10 @@ $(document).ready(function() {
     if ($('#dashChart').length) {
         let dashChartCtx = $('#dashChart');
 
+        $('#addLink').on('shown.bs.modal', function () {
+          $('#btnAddLink').trigger('focus')
+        })
+
         //create chart labels from totalClicksPerMonth
         let labels = [];
         for (let i = 0; i < totalClicksPerMonth.length; i++) {

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Controller per la gestione della pagina degli utenti
+ */
 class UsersController{
 
     private $user;

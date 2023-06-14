@@ -1,10 +1,18 @@
 <?php
-
+/**
+ * Controller base per la gestione delle pagine admin.
+ * Da qui partono tutti i controller per le pagine admin.
+ */
 class AdminController
 {
     public $viewName;
     public $id;
 
+    /**
+     * Render della struttura base della pagina
+     *
+     * @return void
+     */
     public function render()
     {
         require_once('views/template/head.php');

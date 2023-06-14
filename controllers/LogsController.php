@@ -1,6 +1,10 @@
 <?php
 require_once('models/Log.php');
 
+/**
+ * Controller per la gestione della pagina dei log
+ */
+
 class LogsController{
 
     public $log;

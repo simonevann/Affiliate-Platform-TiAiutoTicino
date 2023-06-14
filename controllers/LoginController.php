@@ -1,7 +1,11 @@
 <?php
 require_once('models/User.php');
+/**
+ * Controller per la gestione del login
+ */
+
 class LoginController{
-    //check if user is logged in and return a boolean
+    //Controlla che l'utente sia loggato
     public static function isLoggedIn(){
         if(isset($_SESSION['user'])){
             return true;
@@ -10,6 +14,7 @@ class LoginController{
         }
     }
 
+    //Fa il login, se l'utente è già loggato lo reindirizza alla dashboard, altrimenti lo reindirizza al login
     public function login($username, $password){
         $user = new User();
         $login = $user->login($username, $password);
@@ -18,8 +23,9 @@ class LoginController{
         }else{
             header('Location: /admin/login');
         }
-    }
+    } 
 
+    //Fa il logout
     public function logout(){
         unset($_SESSION['user']);
         header('Location: /admin/login');

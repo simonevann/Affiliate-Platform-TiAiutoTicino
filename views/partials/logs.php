@@ -13,7 +13,7 @@ $logs = $controller->index();
         </div>
     </div>
     <div class="row p-3">
-        <table id="logsTable" class="table table-dark">
+        <table id="logsTable" class="table">
             <thead>
                 <tr>
                     <th>Link ID</th>

@@ -1,6 +1,10 @@
 <?php
 require_once('models/Db.php');
 
+/**
+ * Model per la gestione della tabella log, in cui vengono salvati l'utilizzo degli shortlink
+ */
+
 class Log extends Db{
 
     public function __construct()
@@ -51,7 +55,7 @@ class Log extends Db{
 
     //get the number of click per mounth, the last twelve mounths
     public function getClicksPerMounth(){
-        $sql = "SELECT COUNT(id) AS total, MONTH(click_date) AS month, YEAR(click_date) AS year FROM log GROUP BY month, year ORDER BY year DESC, month DESC LIMIT 12";
+        $sql = "SELECT COUNT(id) AS total, MONTH(click_date) AS month, YEAR(click_date) AS year FROM log GROUP BY month, year ORDER BY year ASC, month ASC LIMIT 12";
         $stmt = $this->prepare($sql);
         $stmt->execute();
         $logs = $stmt->fetchAll(PDO::FETCH_ASSOC);

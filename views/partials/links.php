@@ -16,7 +16,14 @@ if($this->id){
         </div>
     </div>
     <div class="row p-3">
-        <table id="linksTable" class="table table-dark">
+        <div class="col">
+        <button id="btnAddLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addLink">
+            Add a link
+        </button>
+        </div>
+    </div>
+    <div class="row p-3">
+        <table id="linksTable" class="table">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -24,6 +31,7 @@ if($this->id){
                     <th>Link</th>
                     <th>Creation</th>
                     <th>User id</th>
+                    <th>Type</th>
                     <th>Value</th>
                     <th>Click</th>
                     <th class="text-end">Actions</th>
@@ -37,6 +45,7 @@ if($this->id){
                         <td><?php echo $link['destination']; ?></td>
                         <td><?php echo $link['date_creation']; ?></td>
                         <td><?php echo $link['user_id']; ?></td>
+                        <td><?php echo $link['link_value_title']; ?></td>
                         <td><?php echo $link['link_value']; ?></td>
                         <td><?php echo $link['clicks']; ?></td>
                         <td class="text-end">

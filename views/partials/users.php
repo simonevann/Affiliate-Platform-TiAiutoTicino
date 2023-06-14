@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="row p-3">
-        <table id="usersTable" class="table table-dark">
+        <table id="usersTable" class="table">
             <thead>
                 <tr>
                     <th>ID</th>

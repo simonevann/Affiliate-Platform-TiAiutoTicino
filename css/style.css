@@ -1,8 +1,9 @@
-select.form-select.form-select-sm,
-input.form-control.form-control-sm {
-    background-color: #000;
-}
 
 #dashChart{
     height: 200px;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
 }

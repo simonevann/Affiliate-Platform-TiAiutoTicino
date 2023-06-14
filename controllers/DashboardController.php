@@ -2,17 +2,35 @@
 require_once('models/User.php');
 require_once('models/Log.php');
 require_once('models/Link.php');
+require_once('models/Scoreboard.php');
+
+/**
+ * Controller per la gestione della dashboard
+ */
 
 class DashboardController{
 
     private $user;
     private $log;
     private $link;
+    private $scoreboard;
 
     public function __construct(){
         $this->user = new User();
         $this->log = new Log();
         $this->link = new Link();
+        $this->scoreboard = new Scoreboard();
+    }
+
+    //get the scoreboard of the last week
+    public function getScoreboardWeek(){
+        return $this->scoreboard->getScoreboardByWeek();
+    }
+
+    //get the scoreboard of the last month
+    public function getScoreboardMonth(){
+        $scoreboard = new Scoreboard();
+        return $this->scoreboard->getScoreboardByMonth();
     }
 
     //get user number

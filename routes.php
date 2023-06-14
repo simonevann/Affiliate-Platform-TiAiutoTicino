@@ -1,4 +1,7 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST');
+header("Access-Control-Allow-Headers: X-Requested-With");
 
 require_once __DIR__.'/router.php';
 
@@ -6,9 +9,6 @@ require_once __DIR__.'/router.php';
 // ##################################################
 // ##################################################
 
-// Static GET
-// In the URL -> http://localhost
-// The output -> Index
 get('/admin', 'views/admin.php');
 post('/admin', 'views/admin.php');
 
@@ -18,10 +18,20 @@ post('/admin/$page', 'views/admin.php');
 get('/admin/$page/$id', 'views/admin.php');
 post('/admin/$page/$id', 'views/admin.php');
 
+get('/api', 'views/api.php');
+
+//getting all the info of the endpioint
+get('/api/$endpoint', 'views/api.php');
+
+//getting or posting info in a endpioint for a particular id
+get('/api/$endpoint/$id', 'views/api.php');
+post('/api/$endpoint/$id', 'views/api.php');
+
+get('/api/$endpoint/$id/$attr1', 'views/api.php');
+post('/api/$endpoint/$id/$attr1', 'views/api.php');
+
 get('/', 'views/index.php');
 get('/$id', 'views/index.php');
-
-
 
 
 // Dynamic GET. Example with 1 variable
